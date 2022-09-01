@@ -1,5 +1,5 @@
-//import NoticiaPage from "./pages/NoticiaPage";
-import PlayPage from "./pages/PlayPage";
+import NoticiaPage from "./pages/NoticiaPage";
+//import PlayPage from "./pages/PlayPage";
 //import UsuarioPage from "./pages/UsuarioPage";
 //import RegistrarPage from "./pages/RegistrarPage";
 
@@ -7,8 +7,8 @@ import PlayPage from "./pages/PlayPage";
 
 export default function App() {
   return (
-    //<NoticiaPage />  
-    <PlayPage />  
+    <NoticiaPage />  
+    //<PlayPage />  
   //<UsuarioPage />  
   //<RegistrarPage />
   );
