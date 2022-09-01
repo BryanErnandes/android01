@@ -1,15 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native';
 
 export default function NoticiaPage() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.titulo}>Notícias</Text>
         <Image
-          style={styles.roboo}
+          style={styles.logo}
           source={require('../assets/roboo.png')}
         />
+      </View>
+      <View  style={styles.noticia}>
+      <Text style={styles.titulo}>Notícias</Text>
+      <Text style={styles.titulo}>Detalhes</Text>
+      <Text style={styles.titulo}>Celulares</Text>
+      <Text style={styles.titulo}>Sobre</Text>
       </View>
       <View style={styles.corpo}>
         <Image
@@ -44,7 +48,7 @@ export default function NoticiaPage() {
         <Text style={styles.titulo3}>Meio</Text>
         <Text style={styles.titulo3}>Fim</Text>
       </View>
-      <StatusBar style="auto" />
+      <StatusBar style backgroundColo="#010D24" />
     </View>
   );
 }
@@ -55,20 +59,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    flexDirection: "row",
     paddingTop: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
 
+  },
+  noticia: {
+    flexDirection:"row",
+    padding: 1
   },
   titulo: {
     flex: 1,
     alignContent: "space-between",
     fontSize: 20,
-    paddingLeft: 30
+    paddingLeft: 14,
   },
-  roboo: {
-    height: 49,
-    width: 50,
-    marginRight: 15
+  logo: {
+    height: 75,
+    width: 60,
+    marginRight: 15,
   },
   corpo: {
     flex: 1,
@@ -87,12 +96,12 @@ const styles = StyleSheet.create({
   },
   rodape:{
     flexDirection:"row",
-    padding: 6
+    paddingBottom: 10,
   },
   titulo3: {
     flex: 1,
     alignContent: "space-between",
     fontSize: 20,
-    paddingLeft: 30
+    paddingLeft: 37
   },
 });
